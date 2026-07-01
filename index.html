@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For My Bebe ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffd6e7,#ffeaf4);
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+    text-align:center;
+}
+
+.container{
+    background:rgba(255,255,255,0.8);
+    padding:30px;
+    border-radius:20px;
+    max-width:600px;
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+    z-index:10;
+}
+
+img{
+    width:220px;
+    border-radius:15px;
+}
+
+button{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.heart{
+    position:absolute;
+    top:-20px;
+    font-size:20px;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Happy Birthday, Bebe ❤️</h1>
+
+    <img src="foto.jpg" alt="Our Photo">
+
+    <p>
+        Terima kasih sudah hadir dalam hidupku.
+        Aku mencintaimu lebih dari yang bisa dijelaskan dengan kata-kata. 💗
+    </p>
+
+    <button onclick="surprise()">
+        Klik Aku! 🎁
+    </button>
+</div>
+
+<script>
+function surprise(){
+    alert("Aku akan tetap memilihmu, lagi dan lagi. ❤️");
+}
+
+for(let i=0;i<30;i++){
+    let heart=document.createElement("div");
+    heart.innerHTML="💖";
+    heart.className="heart";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(Math.random()*5+5)+"s";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
